@@ -1,17 +1,21 @@
-<div class = 'col-md-3'>
-
-  {{#link-to  'posts.new'}} <button class = 'btn btn-primary ribbon'>New Post</button> {{/link-to}}
-
-<ul>
-  {{#each model as |post|}}
-    <li>{{#link-to 'posts.post.show' post}}{{post.title}}{{/link-to}}</li>
-    <hr>
-  {{/each}}
-
-</ul>
-
+<div class='col-md-3'>
+  {{#link-to  'posts.new'}} <button class = 'btn btn-primary '>New Post</button> {{/link-to}}
+  
+  <hr>
+    <ul class = 'list-unstyled'>
+      {{#each model as |post|}}
+        <li>{{#link-to 'posts.post.show' post}}{{post.title}}{{/link-to}}</li>
+        <hr>
+      {{/each}}
+    </ul>
 </div>
 
-<div class = 'col-md-9'>
+<div class = 'col-md-8'>
+  {{#each flashMessages.queue as |flash|}}
+    {{flash-message flash=flash}}
+    {{/each}}
   {{outlet}}
+</div>
+
+<div class = 'col-md-1'>
 </div>

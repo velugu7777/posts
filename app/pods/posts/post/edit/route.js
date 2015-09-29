@@ -9,6 +9,7 @@ export default Ember.Route.extend({
 
     post.save().then(() => {
       this.transitionTo('posts.post.show');
+      this.get('flashMessages').success('you are  successfully edited a post');
     });
 
   },

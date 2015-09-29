@@ -1,0 +1,27 @@
+<div class='col-md-1'>
+</div>
+  <div class='col-md-9'>
+    <h1>Ember Show posts</h1>
+      <hr>
+
+
+
+        <ul class='list-unstyled'>
+            {{#each model as |post|}}
+              <li>
+
+                <h2>{{post.title}}</h2>
+                <hr>
+                <h4>{{post.body}}</h4>
+                <hr>
+              </li>
+
+          {{/each}}
+        </ul>
+      </div>
+
+
+
+<div class ='col-md-2'>
+</div>
+{{ outlet }}

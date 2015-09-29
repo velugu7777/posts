@@ -1,9 +1,11 @@
 <h1>Show Posts</h1>
 <hr>
-  <h2  >{{model.title}}</h2>
+
+  <h2>{{model.title}}</h2>
   <hr>
   <h4>{{model.body}}</h4>
 
   {{#link-to 'posts.post.edit' model }}<button class ='btn btn-success'>Edit</button>{{/link-to}}
 
   <button {{action 'delete'}}  class="btn btn-danger pull-right">Delete</button>
+{{outlet}}

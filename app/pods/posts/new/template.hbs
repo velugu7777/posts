@@ -1,6 +1,6 @@
 <br>
 <div class="row">
-    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
       <div class="panel panel-primary">
         <div class="panel-heading"><h5>New Post</h5></div>
         <div class="panel-body">
@@ -15,7 +15,7 @@
             <div class="form-group">
               <label for="itemId" class="col-sm-2 control-label">Body</label>
               <div class="col-sm-10">
-                {{textarea type="text" class="form-control" id="body" placeholder="Enter the content of body" value= newPost.body}}
+                {{textarea type="text" class="form-control" rows = "12" id="body" placeholder="Enter the content of body" value= newPost.body}}
               </div>
             </div>
           </form>
@@ -25,6 +25,6 @@
           <button type="submit" class="btn btn-success btn-lg" {{action 'save' model}}>Save</button>
 
         </div> <!-- panel footer-->
-      </div>
+
     </div>
 </div>
