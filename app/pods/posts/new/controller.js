@@ -5,8 +5,10 @@ export default Ember.Controller.extend({
 
   newPost:{
 
+
     title:'',
     body:''
+    
   },
 
 
@@ -19,7 +21,8 @@ export default Ember.Controller.extend({
         this.get('flashMessages').info('You Are Created A New Post');
       });
 
-    }
+    },
+
 
   }
 
