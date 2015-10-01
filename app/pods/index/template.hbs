@@ -1,37 +1,27 @@
-<div class='col-md-1'>
-</div>
-  <div class='col-md-9'>
+  <div class='col-md-1'>
+  </div>
+  <div class='col-md-8'>
     <h1>Ember Show posts</h1>
       <ul class='list-unstyled'>
-
-          {{#each model as |post|}}
-            <div class="container">
-              <div class="panel panel-info">
-
-
-                  <div class="panel-heading"><h5>{{post.title}}</h5></div>
-
-                  <li>
+        {{#each model as |post|}}
+          <div class="container">
+            <div class="panel panel-primary">
+              <div class="panel-heading"><h4>{{post.title}}</h4></div>
+                <li>
                   <div class='panel-body'>
-
-                    <span><mark><h4>{{post.body}}</h4></mark>
-                      {{#link-to 'posts.post.show' post}}continue{{/link-to}}
-
-                  </span>
-                  </div>
-                </li>
-
-
-            </div>
-          </div>
-          {{/each}}
-
-        </ul>
-
-      </div>
-
-
-
-<div class ='col-md-2'>
-</div>
-{{ outlet }}
+                    <h4>
+                      {{post.sbody}}
+                      {{#if post.isLarge}}
+                      {{#link-to 'posts.post.show' post}}....continue{{/link-to}}
+                      {{/if}}
+                    </h4>
+                  </div>  <!--end of panel-body-->
+                </li> <!--end of list-->
+              </div>  <!--end of panel-info-->
+            </div>  <!--end of container-->
+        {{/each}} <!--end of each loop-->
+      </ul> <!--end of ul-->
+    </div>  <!--end col-->
+  <div class ='col-md-2'>
+  </div>
+  {{ outlet }}
